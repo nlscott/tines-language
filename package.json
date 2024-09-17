@@ -1,0 +1,25 @@
+{
+  "name": "tines-language",
+  "displayName": "tines-language",
+  "description": "syntax highlighting for tines formulas",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "tines",
+      "aliases": ["tines", "tines"],
+      "extensions": ["tines"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "tines",
+      "scopeName": "source.tines",
+      "path": "./syntaxes/tines.tmLanguage.json"
+    }]
+  }
+}

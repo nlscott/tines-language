@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "tines",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#blockComments"
+    },
+    {
+      "include": "#lineComments"
+    },
+    {
+      "include": "#fields"
+    },
+    {
+      "include": "#math"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "support.function.tines",
+          "match": "\\b(?i)(first|abs|acos|aes_decrypt|aes_encrypt|first|append|array|asin|at_least|at_most|base64url_decode|base64url_encode|base64_decode|base64_encode|bytesize|capitalize|ceil|chunk_array|combine_columns_and_rows|compact|concat|cos|countif|csv_parse|csv_parse_to_objects|date|date_diff|date_parse|day|deep_merge|default|delete|difference|distance_of_time_in_words|divided_by|downcase|eml_parse|ends_with|error|escape|escape_once|estimated_token_count|filter|find|flatten|flatten_json|floor|force_array|generate_rsa_keys|get|gunzip|gzip|hcl_parse|hex_parse|hmac_sha1|hmac_sha1_base64|hmac_sha256|hmac_sha256_base64|hour|html_decode|htmo_encode|if|if_error|includes|index_of|insert|intersection|in_cidr|is_blank|is_email|is_empty|is_ipv4|is_ipv6|is_ip_address|is_json|is_present|is_url|is_xml|is_yaml|join|jsonpath|json_parse|jwt_sign|keys|lambda|last|last_index_of|ldif_index_of|ldif_parse|legacy_stringify|levenshtein_distance|lstrip|map|map_lambda|match|max|md5|md5_base64|deep_merge|mime_header_decode|min|minus|minute|modulo|month|msg_parse|neat_json|newline_to_br|now|number|object|object_to_csv|parse_url|pluralize|plus|prepend|prompt|push|random|random_element|random_string|range|reduce|regex_extract|regex_replace|reject|remove|remove_first|remove_key|replace|replace_first|reverse|rotate|round|rsa_aes_hybrid_decrypt|rsa_aes_hybrid_encrypt|rsa_decrypt|rsa_encrypt|rstrip|second|set_key|sha1|sha256|shuffle|sin|size|slice|slice_array|sort|sort_natural|split|sqrt|starts_with|story_run_guid|story_run_link|strip|strip_html|strip_newlines|sum|tally|tar|text|times|today|to_csv|to_hex|to_json|to_snake_case|to_xml|to_yaml|transliterate|truncate|truncatewords|type|unflatten_json|union|uniq|unix_timestamp|untar|unzip|upcase|url_decode|url_encode|uuid|values|where|xml_parse|yaml_parse|year|zip|zscaler_obfuscate_api_key)\\b"
+        }
+      ]
+    },
+    "fields": {
+      "patterns": [
+        {
+          "name": "support.variable.tines",
+          "match": "\\b(?i)(lambda)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.tines",
+          "match": "\\b(?i)(and|or|not|\\|)\\b"
+        }
+      ]
+    },
+    "math": {
+      "patterns": [
+        {
+          "name": "keyword.tines",
+          "match": "[.&|!=<>+%\\*-]"
+        }
+      ]
+    },
+    "blockComments": {
+      "name": "comment",
+      "begin": "^\\s*/\\*",
+      "end": "\\*/"
+    },
+    "lineComments": {
+      "patterns": [
+        {
+          "name": "comment.line",
+          "match": "[^:]##.*$"
+        },
+        {
+          "name": "comment.newline",
+          "match": "^##.*$"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.tines",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.tines",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.tines"
+}
