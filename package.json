@@ -3,6 +3,8 @@
   "displayName": "tines-language",
   "description": "syntax highlighting for tines formulas",
   "version": "0.1.0",
+  "icon": "images/icon.png",
+  "publisher": "NicScott",
   "engines": {
     "vscode": "^1.80.0"
   },
